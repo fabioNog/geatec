@@ -7,6 +7,8 @@ ENV PATH="./node_modules/.bin:$PATH"
 # Instalando dependências da aplicação e armazenando em cache.
 COPY . . 
 
+RUN npm install -g yarn
+
 RUN yarn install
 
 RUN yarn install react-scripts
